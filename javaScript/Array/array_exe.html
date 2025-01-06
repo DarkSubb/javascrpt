@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Item" id="lista" >
+    <button type="button" onclick="adicionar()">Adicionar</button>
+    <button type="button" onclick="ordernar()">Ordenar</button>
+    <script>
+        
+        
+        var objetos =['Cadeira', 'Impressora', 'Garfo']
+        function adicionar() {
+
+            var lista = document.getElementById('lista').value
+            //validar de tem alguma coisa no campo
+            if(lista === ''){
+                alert('vazio')
+            }else if (objetos.includes(lista)) {
+                alert('tem')
+            }else{
+                objetos.push(lista);
+                alert(`Item adicionado: ${lista}`)
+                document.getElementById('lista').value = ''
+                console.log(objetos)
+            }
+
+            function ordernar() {
+                objetos.sort();
+                console.log(objetos);
+                alert(objetos)
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex004</title>
+    <style>
+        body{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         var nome = window.prompt("Qual é seu nome")
+         var n = Number(window.prompt("Digite um número"))
+         document.write(`Seu nome tem ${nome.length} letras. <br>`)
+         document.write(`Seu nome em maiúsculo ${nome.toLocaleUpperCase()} <br>`)
+         document.write(`Seu nome em minusculo ${nome.toLocaleLowerCase()}<br>`)
+         document.write(`Esse metado para editar os números toFixed, seu numero e esse ${n} e com o metado fica ${n.toFixed(2)} e agora com virgula no lugar do ponto ${n.toFixed(2).replace(".",",")} <br>`)
+         document.write(`Esse e o seu sálario ${n.toLocaleString('pt-BR', {style: 'currency', currency:'BRl'})}`) //toLocaleString('pt-BR', {style: 'currency', currency:'BRl'}) comando para colocar R$
+    </script>
+</body>
+</html>

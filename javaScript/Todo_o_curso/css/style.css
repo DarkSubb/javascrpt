@@ -1,0 +1,228 @@
+/* Estilo geral do body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+/*Estilo do header*/
+
+header {
+  margin-bottom: 25px;
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Garante que ocupe toda a largura da tela */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+  background-color: #121212; /* Cor de fundo para evitar transparência */
+  border-bottom: 2px solid #00b0ff; /* Linha inferior para destaque */
+}
+
+/* Estilo do container de navegação */
+nav {
+  background-color: #121212;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00b0ff; /* Azul claro para o border */
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Menu */
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+/* Links do menu */
+a {
+  text-decoration: none;
+  color: #00b0ff; /* Azul claro para links */
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Efeito de hover para os links */
+a:hover {
+  color: #76ff03; /* Verde limão ao passar o mouse */
+  border-bottom: 2px solid #76ff03; /* Sublinha com verde limão */
+}
+
+/* Botão (exemplo de ação) */
+button {
+  background-color: #76ff03; /* Verde limão */
+  color: #121212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b0ff; /* Azul claro para hover */
+}
+
+/* Responsividade - menu empilhado em telas menores */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+
+  li {
+    margin: 15px 0;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* Cor de fundo principal */
+body {
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Cabeçalhos */
+h1,
+h2,
+h3 {
+  color: #00b0ff; /* Azul claro para cabeçalhos */
+}
+
+h1 {
+  font-size: 2.5rem; /* Desktop */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Smartphones */
+  }
+}
+
+h2 {
+  font-size: 2.5rem; /* Desktop */
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem; /* Tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.75rem; /* Smartphones */
+  }
+}
+
+/* Links */
+a {
+  color: #00b0ff; /* Azul claro para links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #76ff03; /* Verde limão para links ao passar o mouse */
+}
+
+/* Botões */
+button {
+  background-color: #76ff03; /* Verde limão para botões */
+  color: #121212;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b0ff; /* Azul claro para hover no botão */
+}
+
+/* Destaques de alertas */
+.alert {
+  background-color: #ff7043; /* Laranja para alertas */
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Seções de código */
+pre {
+  background-color: #000000; /* Fundo preto para blocos de código */
+  color: #e0e0e0; /* Texto claro */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/*Conteudo do site*/
+main {
+  max-width: 800px;
+  width: 90%; /* Largura em dispositivos pequenos */
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 90%; /* Reduzir a largura em tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    max-width: 100%; /* Em smartphones, ocupa toda a largura */
+    padding: 10px;
+  }
+}
+
+#container{
+	padding-top: 50px;
+}
+/*descrição e foto*/
+#descricao {
+  display: flex;
+  margin-top: 50px;
+}
+.minha {
+  width: 300px; /* Defina a largura */
+  height: 300px; /* Defina a altura */
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Garante que a imagem fique ajustada */
+  border: 3px solid #00b0ff; /* Opcional: borda ao redor da imagem */
+  box-shadow: 0 4px 8px rgba(1, 18, 49, 0.2); /* Opcional: sombra */
+}
+
+/* Footer */
+footer {
+  background-color: #121212; /* Fundo escuro para o rodapé */
+  color: #e0e0e0;
+  text-align: center;
+  padding: 15px;
+}
