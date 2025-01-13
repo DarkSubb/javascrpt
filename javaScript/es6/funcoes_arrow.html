@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o viewport para a escala adequada em diferentes dispositivos -->
+    <title>Document</title> <!-- Define o título da página -->
+</head>
+<body>
+    <script>
+      // Função tradicional que calcula o quadrado de um número com valor padrão de 5
+      let quadrado = function(x = 5){
+          return x * x; // Retorna o quadrado de x
+      }
+
+      // Arrow function que calcula o quadrado de um número
+      let quadrado1 = (x) => {
+          return x * x; // Retorna o quadrado de x
+      }
+
+      // Arrow function com return implícito para calcular o quadrado
+      let quadrado2 = (x) => x * x; // Retorna implicitamente o quadrado de x sem usar a palavra-chave return
+
+      // Exemplos de como as funções poderiam ser usadas:
+      // document.write(quadrado(3));
+      // document.write(quadrado1(3));
+      // document.write(quadrado2(3));
+
+      // Função tradicional para verificar se um número é par ou ímpar
+      let parOuImpar = function (numero) {
+          if (numero % 2 === 0) {
+              return "par"; // Retorna "par" se o número for divisível por 2
+          } else {
+              return "impar"; // Retorna "impar" caso contrário
+          }
+      };
+
+      // Arrow function para verificar se um número é par ou ímpar
+      let parOuImpar1 = numero => {
+          if (numero % 2 === 0) {
+              return "par"; // Retorna "par" se o número for divisível por 2
+          } else {
+              return "impar"; // Retorna "impar" caso contrário
+          }
+      };
+
+      // Arrow function com return implícito para verificar se um número é par ou ímpar
+      let parOuImpar2 = numero => numero % 2 === 0 ? 'par' : 'impar'; // Retorna implicitamente "par" ou "impar" usando operador ternário
+
+      // Exibe o resultado da função parOuImpar com o número fornecido
+      document.write(parOuImpar2(8)); // Deveria escrever "par" na tela porque 8 é divisível por 2
+    </script>
+</body>
+</html>

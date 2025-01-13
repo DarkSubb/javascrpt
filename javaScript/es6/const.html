@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a configuração de viewport para páginas responsivas -->
+    <title>Document</title> <!-- Define o título da página -->
+</head>
+<body>
+    <script>
+        const SERIE = 'Friends'; //Declara uma constante "SERIE" com o valor 'Friends' -->
+
+        function x() {
+            const SERIE = 'The Walking Dead'; // Dentro da função "x", declara uma nova constante "SERIE" com um valor diferente, 'The Walking Dead' -->
+            console.log(SERIE); // Imprime 'The Walking Dead' no console, que é o valor da constante local -->
+        }
+        x(); //Chama a função "x", que imprime 'The Walking Dead' no console -->
+
+        console.log(SERIE);//Imprime 'Friends' no console, que é o valor da constante global -->
+    </script>
+</body>
+</html>

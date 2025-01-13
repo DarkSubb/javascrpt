@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+        body{
+            background: black;
+            color: aliceblue
+        }
+    </style>
+</head>
+<body>
+    <h1>qual o pais</h1>
+    Em qual pais voçê mora ?<input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verificar" onclick="pais()">
+    <div id="res"></div>
+    <script>
+            var txtp = document.getElementById('txtps')
+            var res = document.querySelector('div#res')
+        function pais(){
+            var pas = txtp.value
+            res.innerHTML = `<p>Atualmente vc mora ${pas}</p>`
+            if (pas == 'brasil') {
+                
+                res.innerHTML += `<p>Então vc e Brasileira</p>`
+            }else{
+
+                res.innerHTML += `<p>Então vc e Estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
