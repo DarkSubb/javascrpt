@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o viewport para a escala adequada em diferentes dispositivos -->
+    <title>Document</title> <!-- Define o título da página -->
+</head>
+<body>
+    <script>
+      // Demonstrando a diferença entre var e let
+
+      function x() {
+        // Tentando acessar 'serie' antes de sua declaração
+        console.log(serie); // Com 'var': undefined (hoisting)
+                            // Com 'let': ReferenceError (hoisting não se aplica)
+        
+        if (true) {
+          var serieVar = "Using var";
+          let serieLet = "Using let";
+        }
+
+        // Acessando variáveis após o bloco if
+        console.log(serieVar); // Com 'var': "Using var" (var tem escopo de função)
+        console.log(serieLet); // Com 'let': ReferenceError (let tem escopo de bloco)
+      }
+
+      // Demonstrando escopo global, função e bloco
+      if (true) {
+        var serie = "The Walking Dead"; // 'var' tem escopo de função ou global
+        let show = "Friends"; // 'let' tem escopo de bloco
+        x();
+      }
+
+      // Acessando variáveis fora do bloco if
+      console.log(serie); // Com 'var': "The Walking Dead" (var está disponível globalmente)
+      console.log(show); // Com 'let': ReferenceError (let não está disponível fora do bloco)
+    </script>
+</body>
+</html>

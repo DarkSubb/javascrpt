@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Software de marcenaria
+      // Exemplo com cadeira e sofá - comparando paradigma procedural e OO
+
+      // ****** Paradigma Procedural ******
+
+      // Array de cadeiras
+      let cadeiras = Array();
+
+      // Adicionando cadeiras manualmente no array
+      cadeiras[0] = Array();
+      cadeiras[0]["qtde_pernas"] = 4;
+      cadeiras[0]["giratoria"] = false;
+      cadeiras[0]["cor"] = "azul";
+
+      cadeiras[1] = Array();
+      cadeiras[1]["qtde_pernas"] = 1;
+      cadeiras[1]["giratoria"] = true;
+      cadeiras[1]["cor"] = "vermelha";
+
+      // Função para girar cadeira baseado no índice no array
+      function girar_cadeira(indice) {
+        if (cadeiras[indice]["giratoria"] === true) {
+          console.log("girou");
+        } else {
+          console.log("cadeira não giratoria");
+        }
+      }
+
+      // Função para adicionar uma nova cadeira ao array
+      function adicionar_cadeira(qtde_pernas, giratoria, cor) {
+        let cadeira = Array();
+
+        cadeira["qtde_pernas"] = qtde_pernas;
+        cadeira["giratoria"] = giratoria;
+        cadeira["cor"] = cor;
+
+        cadeiras.push(cadeira);
+      }
+
+      // Adicionando uma cadeira e testando a função de girar
+      adicionar_cadeira(3, false, "verde");
+      console.log(cadeiras);
+      girar_cadeira(2);
+
+      // ****** Paradigma de Orientação a Objetos (OO) ******
+
+      // Definição da classe Cadeira
+      class Cadeira {
+        constructor(qtde_pernas, giratoria, cor) {
+          this.qtde_pernas = qtde_pernas;
+          this.giratoria = giratoria;
+          this.cor = cor;
+        }
+
+        // Método para girar a cadeira
+        girarCadeira() {
+          if (this.giratoria === true) {
+            console.log("girou");
+          } else {
+            console.log("cadeira não giratoria");
+          }
+        }
+      }
+
+      // Instanciando objetos da classe Cadeira e adicionando ao array
+      let cadeirasOO = Array();
+
+      cadeirasOO.push(new Cadeira(4, false, "azul"));
+      cadeirasOO.push(new Cadeira(1, true, "amarela"));
+
+      // Exibindo as cadeiras no console
+      console.log(cadeirasOO);
+      cadeirasOO[1].girarCadeira(); // Descomente esta linha para testar o método girarCadeira
+    </script>
+  </body>
+</html>

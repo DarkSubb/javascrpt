@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define a linguagem do conteúdo como português do Brasil -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ajusta o layout para funcionar bem em dispositivos móveis -->
+    <title>Document</title> <!-- Título do documento -->
+  </head>
+  <body>
+    <script>
+      // Definição da classe Produtos
+      class Produtos {
+        // Construtor da classe que inicializa os atributos
+        constructor(descricao, preco) {
+          this.descricao = descricao; // Atributo descrição do produto
+          this.preco = preco; // Atributo preço do produto
+        }
+
+        // Método para visualizar a descrição do produto
+        verDescricao() {
+          console.log(`${this.descricao} por apenas ${this.preco}`);
+        }
+      }
+
+      // Instancia um novo objeto da classe Produtos
+      let produto = new Produtos('Notebook', 2200);
+      produto.verDescricao(); // Chama o método verDescricao() do objeto produto
+
+      //---------------------------------------------//
+
+      // Objeto literal para representar um produto
+      let produtoLiteral = {
+        descricao: "Geladeira", // Atributo descrição do produto
+        preco: 1800, // Atributo preço do produto
+        // Método para visualizar a descrição do produto
+        verDescricao: function() {
+          console.log(`${this.descricao} por apenas ${this.preco}`);
+        },
+      };
+
+      produtoLiteral.verDescricao(); // Chama o método verDescricao() do objeto produtoLiteral
+
+    </script>
+  </body>
+</html>
