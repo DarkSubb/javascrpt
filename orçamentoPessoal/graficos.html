@@ -2,14 +2,15 @@
   <head>
     <meta charset="utf-8" />
     <title>Orçamento pessoal</title>
-    <!-- Inclui o framework CSS Bootstrap para facilitar a criação de layouts e estilos -->
+
+    <!-- Bootstrap início -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <!-- Inclui as bibliotecas JavaScript necessárias para o funcionamento do Bootstrap -->
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -25,20 +26,20 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- Fonte de ícones Font Awesome -->
+    <!-- Bootstrap fim -->
+
+    <!-- Font Awesome -->
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
     ></script>
-    <!-- Importação do script JavaScript que contém a lógica da aplicação -->
+
     <script src="app.js"></script>
   </head>
 
-  <body>
-    <!-- Barra de navegação superior -->
+  <body onload="carregaListaDespesas()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
       <div class="container">
-        <!-- Logo e botão de navegação para dispositivos móveis -->
         <a class="navbar-brand" href="#">
           <img src="logo.png" width="50" height="35" alt="Orçamento pessoal" />
         </a>
@@ -53,16 +54,16 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Links de navegação -->
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Cadastro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="consulta.html">Consulta</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="graficos.html">Graficos</a>
             </li>
           </ul>
@@ -70,25 +71,22 @@
       </div>
     </nav>
 
-    <!-- Formulário principal de registro de despesas -->
     <div class="container">
-      <!-- Título da seção -->
-      <div class="row">
-        <div class="col mb-5">
-          <h1 class="display-4">Registro de nova despesa</h1>
+      <div class="row mb-5">
+        <div class="col">
+          <h1 class="display-4">Consulta de despesas</h1>
         </div>
       </div>
-      <!-- Campos do formulário -->
+
       <div class="row mb-2">
         <div class="col-md-2">
-          <!-- Campo para selecionar o ano -->
           <select class="form-control" id="ano">
             <option value="">Ano</option>
             <option value="2018">2018</option>
           </select>
         </div>
+
         <div class="col-md-2">
-          <!-- Campo para selecionar o mês -->
           <select class="form-control" id="mes">
             <option value="">Mês</option>
             <option value="1">Janeiro</option>
@@ -103,15 +101,14 @@
             <option value="10">Outubro</option>
             <option value="11">Novembro</option>
             <option value="12">Dezembro</option>
-            <!-- Lista de todos os meses -->
           </select>
         </div>
+
         <div class="col-md-2">
-          <!-- Campo para inserir o dia -->
           <input type="text" class="form-control" placeholder="Dia" id="dia" />
         </div>
+
         <div class="col-md-6">
-          <!-- Campo para selecionar o tipo de despesa -->
           <select class="form-control" id="tipo">
             <option value="">Tipo</option>
             <option value="1">Alimentação</option>
@@ -119,12 +116,11 @@
             <option value="3">Lazer</option>
             <option value="4">Saúde</option>
             <option value="5">Transporte</option>
-            <!-- Outros tipos de despesas -->
           </select>
         </div>
       </div>
-      <div class="row">
-        <!-- Campo para descrição -->
+
+      <div class="row mb-5">
         <div class="col-md-8">
           <input
             type="text"
@@ -133,7 +129,7 @@
             id="descricao"
           />
         </div>
-        <!-- Campo para valor -->
+
         <div class="col-md-2">
           <input
             type="text"
@@ -142,47 +138,33 @@
             id="valor"
           />
         </div>
-        <!-- Botão para registrar a despesa -->
+
         <div class="col-md-2 d-flex justify-content-end">
           <button
             type="button"
             class="btn btn-primary"
-            onclick="cadastrarDespesa()"
+            onclick="pesquisarDespesa()"
           >
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-search"></i>
           </button>
         </div>
       </div>
-    </div>
 
-    <!-- Modal de feedback -->
-    <div
-      class="modal fade"
-      id="modalRegistraDespesa"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div id="modal_titulo_div">
-            <h5 class="modal-title" id="modal_titulo"></h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modal_conteudo"></div>
-          <div class="modal-footer">
-            <button type="button" data-dismiss="modal" id="modal_btn">
-              Voltar
-            </button>
-          </div>
+      <div class="row">
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="listaDespesas"></tbody>
+          </table>
         </div>
       </div>
     </div>
