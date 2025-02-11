@@ -1,0 +1,183 @@
+/* ==========================
+   ESTILOS GERAIS
+========================== */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+  padding-top: 80px;
+}
+
+h1, h2, h3 {
+  color: #00b0ff; /* Azul claro para cabeçalhos */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.75rem; }
+}
+
+/* ==========================
+   HEADER E NAVEGAÇÃO
+========================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #121212;
+  border-bottom: 2px solid #00b0ff;
+}
+
+nav {
+  background-color: #121212;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00b0ff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #00b0ff;
+  font-size: 16px;
+  padding: 10px;
+}
+
+a:hover {
+  color: #76ff03;
+  border-bottom: 2px solid #76ff03;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  ul {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+
+  li {
+    margin: 15px 0;
+  }
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+button {
+  background-color: #76ff03;
+  color: #121212;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b0ff;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* ==========================
+   SEÇÕES E CONTEÚDO
+========================== */
+.main {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main { max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+  .main {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+#descricao {
+  display: flex;
+  margin-top: 50px;
+}
+
+.minha {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00b0ff;
+  box-shadow: 0 4px 8px rgba(1, 18, 49, 0.2);
+}
+
+/* ==========================
+   ELEMENTOS ESPECIAIS
+========================== */
+.alert {
+  background-color: #ff7043;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+pre {
+  background-color: #000000;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+footer {
+  background-color: #121212;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 15px;
+}
